@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Custom dengan Tailwind CSS CDN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="custom-font.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        custom: ['MyFont', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F8F19D;
+            position: relative;
+            overflow-x: hidden; /* Hanya menyembunyikan scroll horizontal */
+        }
+        .playball-regular {
+            font-family: "Playball", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }  
+        .philosopher-regular {
+            font-family: "Philosopher", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .philosopher-bold {
+            font-family: "Philosopher", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .philosopher-regular-italic {
+            font-family: "Philosopher", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .philosopher-bold-italic {
+            font-family: "Philosopher", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./assets/images/download.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+    </style>  
+</head>
+<body>
+    <div class="flex flex-col gap-4 justify-center my-2">
+
+        <div class="flex flex-col">
+            <div class="flex flex-col justify-center items-center font-custom tracking-[2px] text-[#C09573]">
+                <img src="assets\images\divider1.png" alt="Assets 1">
+                <h1 class="font-bold text-[50px] leading-none mt-12">Uleman</h1>
+                <img src="assets\images\barong.png" alt="Assets 1" width="250" height="130">
+                <h2 class="flex font-bold text-[36px] leading-none">Upacara Pitra</h2>
+                <h2 class="flex font-bold text-[36px] leading-none">Yadnya</h2>
+                <h1 class="font-bold text-[50px] pt-2">Pelebon</h1>
+            </div>
+            <div class="flex flex-col justify-center items-center my-2 gap-8">
+                <p class="philosopher-regular font-semibold tracking-[2px]"> Rabu, 04 Desember 2024 </p>
+            </div>
+        </div>
+        <div class="flex flex-col mt-3">
+            <div class="flex flex-col justify-center items-center tracking-[2px]">
+                <img src="assets\images\divider1.png" alt="Assets 1">
+                <p class="playball-regular text-[32px] leading-none mt-12">Om Swastyastu</p>
+                <p class="philosopher-regular font-light text-[12px] text-center mx-4 mt-6">Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa / Tuhan Yang Maha Esa, kami akan menyelenggarakan Upacara Pitra Yadnya Pelebon</p>
+                <div class="my-2 flex flex-col justify-center items-center">
+                    <img src="./assets/images/grandmother.png" alt="Avatar" class="w-32 h-32 rounded-full object-cover border-[5px] border-[#C09573]">
+                    <div class="playball-regular leading-[16px] p-2 text-[24px]">Md Sumarni</div>
+                </div>
+                <p class="playball-regular text-4xl">&</p>
+                <div class="my-2 flex flex-col justify-center items-center">
+                    <img src="./assets/images/grandmother.png" alt="Avatar" class="w-32 h-32 rounded-full object-cover border-[5px] border-[#C09573]">
+                    <div class="playball-regular leading-[16px] p-2 text-[24px]">Ketut Asti</div>
+                </div>
+                
+                <p class="philosopher-regular font-light text-[12px] text-center mx-4 mt-6">Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa untuk kelancaran upacara kami pada</p>
+            </div>
+            <div class="flex flex-col justify-center items-center my-4 gap-4">
+                <img src="assets\images\divider1.png" alt="Assets 1">
+                <h1 class="text-[#C09573] text-3xl playball-regular font-semibold">Rahina</h1>
+                <div class="philosopher-regular rounded-[16px] border-[1.5px] border-[#C09573] w-5/6 flex flex-col justify-center text-center py-4 font-bold tracking-[1px]">
+                    <h1>Rabu, 4 Desember 2024</h1>
+                    <h1 class="py-3">11.00 - 16.00 WITA</h1>
+                    <h2>Banjar Desa</h2>
+                    <h2>Desa Sudaji, Sawan - Buleleng</h2>
+                </div>
+                <p class="philosopher-regular text-center text-[12px] w-[250px] font-light tracking-[2px]">Atas kehadiran dan doanya kami ucapkan terima kasih.</p>
+                <img src="assets\images\divider1.png" alt="Assets 1">
+            </div>
+            <div class="flex flex-col justify-center items-center gap-4">
+                <h1 class="text-[#C09573] text-3xl playball-regular font-semibold">Genah Karya</h1>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3949.504537291706!2d115.16308900000001!3d-8.151812999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDknMDYuNSJTIDExNcKwMDknNDcuMSJF!5e0!3m2!1sid!2sid!4v1731212011345!5m2!1sid!2sid" 
+                    width="280" 
+                    height="200" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p class="philosopher-regular text-center text-[12px] w-[250px] font-light tracking-[2px]">Dumogi Ida Sang Hyang Widhi Wasa mapaica kerahayuan lan kerahajengan.</p>
+                <div class="border-[1px] w-full border-[#C09573]"></div>
+                <div class="philosopher-regular flex flex-row text-[8px] gap-4 tracking-[2px]">
+                    <div class="flex flex-col gap-1">
+                        <h1>Rabu, 27/11/2024</h1>
+                        <h1>Selasa, 03/12/2024</h1>
+                        <h1>Rabu, 04/12/2024</h1>
+                        <h1>Kamis, 05/12/2024</h1>
+                        <h1>Jumat, 06/12/2024</h1>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p>: Mepejauman</p>
+                        <p>: Pebersihan</p>
+                        <p>: Pengembang</p>
+                        <p>: Pedeengan</p>
+                        <p>: Pengutangan</p>
+                    </div>
+                </div>
+                <div class="border-[1px] w-full border-[#C09573]"></div>
+                <div class="philosopher-bold flex flex-col leading-[16px] text-end">
+                    <p class="text-[12px] tracking-[3px]">Atas nama Keluarga</p>
+                    <p class="text-[16px] tracking-[2px]">Ketut Sumarwan</p>
+                    <p class="text-[16px] tracking-[2px]">Gede Sumardana</p>
+                </div>
+                <div class="border-[1px] w-full border-[#C09573]"></div>
+                <p class="playball-regular text-[24px] leading-none">Om Shanti Shanti Shanti Om</p>
+                <img src="assets\images\divider1.png" alt="Assets 1">
+            </div>
+            
+        </div>
+    </div>
+    </body>
+</html>
