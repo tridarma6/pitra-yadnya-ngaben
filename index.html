@@ -81,7 +81,7 @@
         <div class="absolute">
             <div class="flex justify-center items-center my-4">
                 <button id="playPauseButton" class="bg-[#C09573] text-white px-4 py-2 w-[70px] h-[70px] rounded-full font-bold tracking-[2px] lg:text-[24px] fixed bottom-4 right-4 shadow-lg">
-                    <i class="fa-solid fa-volume-xmark"></i>
+                    <i class="fa-solid fa-volume-high"></i>
                 </button>
             </div>
             <audio id="audioPlayer" src="assets/sounds/angklung-ngaben.mp3" autoplay></audio>
@@ -186,10 +186,10 @@
             console.log(isPlaying);
             if (isPlaying) {
                 audioPlayer.pause();
-                playPauseButton.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+                playPauseButton.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
             } else {
                 audioPlayer.play();
-                playPauseButton.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+                playPauseButton.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
             }
             isPlaying = !isPlaying;
         });
